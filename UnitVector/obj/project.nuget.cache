@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "tG67UJyQwZQ0NyD+F7mrMjs6D9M3swZbJ/5+c2UkZPdumfPtvvHzcg7ZQ9lflYYkK1BklTA9p///XYF/fVqpHQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Marco\\source\\repos\\UnitVector\\UnitVector\\UnitVector.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Marco\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+  ],
+  "logs": []
+}
