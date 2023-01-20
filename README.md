@@ -4,9 +4,12 @@ This project is a C# class library that implements Unit Vectors built on top of 
 ---
 
 ### To-do
-- Unit tests
-- Example cases
-- Vector3 and more
+- [x] Vector2 
+- [x] Unit tests
+- [ ] Documentation 
+- [ ] Example cases
+- [ ] Vector3
+- [ ] Vector4
 
 ### Useful Links
 - https://en.wikipedia.org/wiki/Unit_vector
