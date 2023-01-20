@@ -80,40 +80,24 @@ namespace UnitVector
         }
 
         /// <summary>
-        /// Convert to an angle (radian)
-        /// </summary>
-        /// <returns>Angle in radians</returns>
-        public float ConvertToAngle()
-        {
-            float angle = MathF.Atan2(X, Y);
-
-            if (Y < 0)
-            {
-                angle = 360 + angle;
-            }
-
-            return angle;
-        }
-
-        /// <summary>
-        /// Get the current quadrant (2d)
+        /// Gets the current quadrant (2d)
         /// </summary>
         /// <returns>current Quadrant (2d)</returns>
         public Quadrant2 GetCurrentQuadrant()
         {
-            if (X > 0 && Y > 0) // + +
+            if (X > 0 && Y < 0) // + +
             {
                 return Quadrant2.I;
             }
-            else if (X < 0 && Y > 0) // - + 
+            else if (X < 0 && Y < 0) // - + 
             {
                 return Quadrant2.II;
             }
-            else if (X < 0 && Y < 0) // - -
+            else if (X < 0 && Y > 0) // - -
             {
                 return Quadrant2.III;
             }
-            else if (X > 0 && Y < 0) // + -
+            else if (X > 0 && Y > 0) // + -
             {
                 return Quadrant2.IV;
             }
@@ -148,6 +132,24 @@ namespace UnitVector
         }
 
         /// <summary>
+        /// Converts to an angle (radian)
+        /// </summary>
+        /// <returns>Angle in radians</returns>
+        public float ConvertToAngle()
+        {
+            float reversedY = -Y; // the y axis used for these methods goes the opposite way
+
+            float angle = MathF.Atan2(reversedY, X);
+
+            if (reversedY < 0)
+            {
+                angle = 2 * MathF.PI + angle;
+            }
+
+            return angle;
+        }
+
+        /// <summary>
         /// Converts to Vector2
         /// </summary>
         /// <returns>UnitVector2 converted to Vector2</returns>
@@ -162,7 +164,7 @@ namespace UnitVector
         /// <returns>UnitVector2 converted to Vector2</returns>
         public static Vector2 ConvertToVector2(UnitVector2 uVector2)
         {
-            return new Vector2(uVector2.X, uVector2.X);
+            return new Vector2(uVector2.X, uVector2.Y);
         }
 
         public override bool Equals(object obj)
@@ -186,7 +188,7 @@ namespace UnitVector
 
         public override int GetHashCode()
         {
-            return this.X.GetHashCode() ^ Y.GetHashCode(); 
+            return this.X.GetHashCode() ^ this.Y.GetHashCode(); 
         }
 
         public override string ToString()
@@ -241,7 +243,7 @@ namespace UnitVector
                 );
         }
 
-        public static Vector2 operator /(float scalar, UnitVector2 unitVector)
+        public static Vector2 operator /(UnitVector2 unitVector, float scalar)
         {
             return new Vector2(
                 unitVector.X / scalar,
