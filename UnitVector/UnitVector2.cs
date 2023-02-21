@@ -85,19 +85,19 @@ namespace UnitVector
         /// <returns>current Quadrant (2d)</returns>
         public Quadrant2 GetCurrentQuadrant()
         {
-            if (X > 0 && Y < 0) // + +
+            if (this.X > 0 && this.Y < 0) // + +
             {
                 return Quadrant2.I;
             }
-            else if (X < 0 && Y < 0) // - + 
+            else if (this.X < 0 && this.Y < 0) // - + 
             {
                 return Quadrant2.II;
             }
-            else if (X < 0 && Y > 0) // - -
+            else if (this.X < 0 && this.Y > 0) // - -
             {
                 return Quadrant2.III;
             }
-            else if (X > 0 && Y > 0) // + -
+            else if (this.X > 0 && this.Y > 0) // + -
             {
                 return Quadrant2.IV;
             }
@@ -137,11 +137,9 @@ namespace UnitVector
         /// <returns>Angle in radians</returns>
         public float ConvertToAngle()
         {
-            float reversedY = -Y; // the y axis used for these methods goes the opposite way
+            float angle = MathF.Atan2(this.Y, this.X);
 
-            float angle = MathF.Atan2(reversedY, X);
-
-            if (reversedY < 0)
+            if (this.Y < 0)
             {
                 angle = 2 * MathF.PI + angle;
             }

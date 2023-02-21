@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "wnhJylj3Yoig/9tCGT+INMd5u+Uj1neHmU4U8kC3UMNDeGGwsX1i8AM/E5ZYs2Hja46iBHXeR9GZO1+5WKAi1Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Marco\\source\\repos\\UnitVector\\ScreenSaverDemo\\ScreenSaverDemo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Marco\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\Marco\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+  ],
+  "logs": []
+}

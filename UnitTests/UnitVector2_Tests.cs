@@ -223,7 +223,7 @@ namespace UnitTests
         {
             // Arrange
             UnitVector2 uVector2 = new UnitVector2(0, 1);
-            float expectedAngle = 3 / 2f * MathF.PI;
+            float expectedAngle = MathF.PI / 2f;
 
             // Act
             float angle = uVector2.ConvertToAngle();
@@ -237,7 +237,7 @@ namespace UnitTests
         {
             // Arrange
             UnitVector2 uVector2 = new UnitVector2(1, -1);
-            float expectedAngle = 1 / 4f * MathF.PI;
+            float expectedAngle = 7 / 4f * MathF.PI;
 
             // Act
             float angle = uVector2.ConvertToAngle();
