@@ -7,7 +7,7 @@ This project is a C# class library that implements Unit Vectors built on top of 
 - [x] Vector2 
 - [x] Unit tests
 - [ ] Documentation 
-- [ ] Example cases
+- [x] Example cases
 - [ ] Vector3
 - [ ] Vector4
 
